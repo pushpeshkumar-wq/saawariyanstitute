@@ -4,155 +4,688 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAAWARIYA INSTITUTE | Excellence in Teaching</title>
-<meta name="description" content="SAAWARIYA INSTITUTE - Excellence in Teaching. Physics, Mathematics and Foundation courses.">
+<meta name="description" content="Saawariya Institute — Excellence in Teaching. Physics, Mathematics and Foundation coaching with online and offline learning options.">
+<title>Saawariya Institute | Excellence in Teaching</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;color:#17213c}
-:root{--navy:#071943;--gold:#f5ca35;--white:#fff}
-header{background:var(--navy);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:23px;font-weight:bold;color:var(--gold)}
-.logo span{color:white}
-nav{display:flex;gap:25px;align-items:center}
-nav a{color:white;text-decoration:none;font-weight:bold;font-size:14px}
-nav a:hover{color:var(--gold)}
-.hero{min-height:570px;background:linear-gradient(120deg,#04102f,#102e69);color:white;padding:100px 8%;display:flex;align-items:center}
-.hero-content{max-width:720px}
-.tag{color:var(--gold);letter-spacing:3px;font-size:13px;font-weight:bold}
-h1{font-size:clamp(40px,6vw,68px);line-height:1.1;margin:25px 0}
-h1 span,h2 span{color:var(--gold)}
-.hero p{font-size:18px;line-height:1.8;color:#d7dfef}
-.btn{display:inline-block;background:var(--gold);color:var(--navy);padding:15px 27px;text-decoration:none;border-radius:5px;font-weight:bold;margin-top:28px}
-section{padding:80px 8%}
-.heading{text-align:center;margin-bottom:45px}
-.heading h2{font-size:36px;color:var(--navy);margin:12px}
-.heading p{color:#68738a;line-height:1.7}
-.banner{background:#f5f7fc;text-align:center}
-.banner img{width:100%;max-width:1050px;height:auto;border-radius:10px;box-shadow:0 10px 30px #07194320}
-.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.course{padding:32px;background:#fff;border:1px solid #e2e6ee;border-radius:10px;box-shadow:0 8px 25px #07194312}
-.course h3{color:var(--navy);font-size:24px;margin:18px 0}
-.course p{color:#657087;line-height:1.7}
-.symbol{font-size:38px;color:#bd9400}
-.about{background:#f5f7fc;text-align:center}
-.about p{max-width:750px;margin:20px auto;color:#657087;line-height:1.9}
-.modes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.mode{background:var(--navy);color:white;padding:35px;border-radius:10px}
-.mode h3{color:var(--gold);margin-bottom:12px;font-size:22px}
-.mode p{line-height:1.7;color:#d5deef}
-.contact{background:var(--navy);color:white;text-align:center}
-.contact h2{font-size:38px;margin:15px}
-.contact p{line-height:1.8;color:#d5deef}
-.contact a.phone{display:block;color:var(--gold);font-size:25px;font-weight:bold;margin:15px}
-footer{background:#030b20;color:white;text-align:center;padding:30px}
-footer span{color:var(--gold)}
-@media(max-width:750px){
-header{gap:15px}
-nav{width:100%;flex-wrap:wrap;gap:15px}
-.hero{padding:75px 7%;min-height:450px}
-.courses,.modes{grid-template-columns:1fr}
-section{padding:60px 7%}
+:root {
+  --navy:#071b52;
+  --navy2:#0b286c;
+  --gold:#ffd51d;
+  --green:#087443;
+  --ink:#17233d;
+  --muted:#64708a;
+  --paper:#f6f8fc;
+  --white:#fff;
+}
+
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+}
+a {color:inherit;text-decoration:none}
+.wrap {width:min(1120px,92%);margin:auto}
+
+header {
+  background:var(--navy);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:20;
+  box-shadow:0 4px 18px #06143c35;
+}
+.nav {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:900;
+  letter-spacing:.5px;
+}
+.mark {
+  height:48px;
+  width:48px;
+  border:2px solid var(--gold);
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  color:var(--gold);
+  font-size:30px;
+  font-weight:bold;
+}
+.brand small {
+  display:block;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#dce5ff;
+}
+nav {
+  display:flex;
+  align-items:center;
+  gap:25px;
+  font-size:14px;
+  font-weight:700;
+}
+nav a:hover {color:var(--gold)}
+
+.nav-cta,.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--gold);
+  color:var(--navy);
+  padding:12px 19px;
+  border-radius:9px;
+  font-weight:900;
+  border:0;
+  cursor:pointer;
+}
+
+.hero {
+  background:linear-gradient(120deg,#061744 0%,#0b2b78 70%,#123b88 100%);
+  color:white;
+  padding:76px 0 70px;
+  overflow:hidden;
+}
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:44px;
+}
+.eyebrow {
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:12px;
+}
+h1 {
+  font-size:clamp(38px,5.2vw,64px);
+  line-height:1.06;
+  margin:16px 0 18px;
+  letter-spacing:-1.8px;
+}
+.hero p {
+  font-size:18px;
+  color:#e0e8ff;
+  max-width:560px;
+}
+.tagline {
+  font-family:Georgia,serif;
+  font-style:italic;
+  color:var(--gold);
+  font-size:clamp(20px,2.5vw,27px);
+  margin:22px 0;
+}
+.actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+.btn-outline {
+  border:1px solid #ffffff8c;
+  color:white;
+  padding:11px 18px;
+  border-radius:9px;
+  font-weight:800;
+}
+.poster-frame {
+  background:#fff;
+  padding:8px;
+  border-radius:18px;
+  box-shadow:0 24px 70px #0006;
+  transform:rotate(1deg);
+}
+.poster-frame img {
+  width:100%;
+  display:block;
+  border-radius:11px;
+}
+
+section {padding:76px 0}
+.section-head {
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 38px;
+}
+.section-head h2 {
+  font-size:clamp(28px,3vw,40px);
+  margin:8px 0;
+  color:var(--navy);
+}
+.section-head p {
+  color:var(--muted);
+  margin:0;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card {
+  background:white;
+  border:1px solid #e6eaf2;
+  border-radius:16px;
+  padding:26px;
+  box-shadow:0 8px 28px #10295b0b;
+}
+.icon {
+  height:48px;
+  width:48px;
+  border-radius:13px;
+  background:#fff5bf;
+  color:var(--navy);
+  display:grid;
+  place-items:center;
+  font-size:24px;
+  margin-bottom:18px;
+}
+.card h3 {
+  color:var(--navy);
+  font-size:21px;
+  margin:0 0 10px;
+}
+.card p {
+  color:var(--muted);
+  margin:0 0 14px;
+}
+.card ul {
+  padding-left:19px;
+  margin:0;
+  color:#3c4962;
+}
+.card li {margin:7px 0}
+
+.about {background:white}
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:46px;
+  align-items:center;
+}
+.about h2 {
+  font-size:clamp(29px,3vw,42px);
+  line-height:1.15;
+  color:var(--navy);
+  margin:10px 0 18px;
+}
+.about p {color:var(--muted)}
+.pill-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+.pill {
+  background:#eef2ff;
+  color:var(--navy);
+  padding:8px 13px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:13px;
+}
+
+.modes {
+  background:var(--navy);
+  color:white;
+}
+.modes .section-head h2 {color:white}
+.modes .section-head p {color:#d3ddf7}
+.mode-card {
+  background:#102d73;
+  border:1px solid #35549b;
+  color:white;
+}
+.mode-card h3 {color:white}
+.mode-card p {color:#d7e1ff}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:25px;
+  align-items:start;
+}
+.contact-info {
+  background:var(--navy);
+  color:white;
+  border-radius:17px;
+  padding:30px;
+}
+.contact-info h3 {
+  font-size:24px;
+  margin-top:0;
+}
+.contact-info p {color:#d8e1f7}
+.phone {
+  display:block;
+  color:var(--gold);
+  font-size:22px;
+  font-weight:900;
+  margin:13px 0;
+}
+
+form {
+  background:white;
+  border:1px solid #e6eaf2;
+  border-radius:17px;
+  padding:28px;
+  box-shadow:0 8px 28px #10295b0b;
+}
+label {
+  display:block;
+  font-weight:800;
+  font-size:13px;
+  margin:0 0 7px;
+  color:var(--navy);
+}
+input,select,textarea {
+  width:100%;
+  padding:13px 14px;
+  border:1px solid #d8deea;
+  border-radius:9px;
+  font:inherit;
+  margin-bottom:17px;
+  background:#fff;
+}
+textarea {
+  min-height:110px;
+  resize:vertical;
+}
+form .btn {
+  width:100%;
+  font-size:15px;
+}
+.note {
+  font-size:12px;
+  color:var(--muted);
+  margin:12px 0 0;
+}
+
+footer {
+  background:#041238;
+  color:#dbe4ff;
+  padding:28px 0;
+  text-align:center;
+}
+footer strong {color:white}
+.mobile-call {display:none}
+
+@media(max-width:800px) {
+  nav {gap:13px;font-size:12px}
+  .hero-grid,.about-grid,.contact-grid {
+    grid-template-columns:1fr;
+  }
+  .poster-frame {
+    max-width:650px;
+    margin:auto;
+  }
+  .cards {grid-template-columns:1fr 1fr}
+  .hero {padding:55px 0}
+}
+
+@media(max-width:560px) {
+  .nav {min-height:68px}
+  nav {display:none}
+  .cards {grid-template-columns:1fr}
+  section {padding:58px 0}
+  .hero p {font-size:16px}
+  .brand {font-size:14px}
+  .mobile-call {
+    display:inline-flex;
+    position:fixed;
+    bottom:16px;
+    right:16px;
+    z-index:30;
+    background:var(--gold);
+    color:var(--navy);
+    padding:13px 17px;
+    border-radius:999px;
+    font-weight:900;
+    box-shadow:0 6px 20px #0004;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <header>
-<div class="logo">SAAWARIYA <span>INSTITUTE</span></div>
-<nav>
-<a href="#home">Home</a>
-<a href="#courses">Courses</a>
-<a href="#about">About</a>
-<a href="#learning">Learning</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <span class="mark">S</span>
+      <span>SAAWARIYA<small>INSTITUTE</small></span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#courses">Courses</a>
+      <a href="#modes">Learning Modes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="#contact">Enquire Now</a>
+  </div>
 </header>
 
 <main>
-<section class="hero" id="home">
-<div class="hero-content">
-<div class="tag">EXCELLENCE IN TEACHING</div>
-<h1>Your Success.<br><span>Our Mission.</span></h1>
-<p>Build strong concepts, develop confidence and achieve your academic goals with SAAWARIYA INSTITUTE.</p>
-<a href="#courses" class="btn">EXPLORE COURSES →</a>
-</div>
-</section>
 
-<section class="banner">
-<div class="heading">
-<div class="tag">WELCOME TO SAAWARIYA</div>
-<h2>Excellence in Education</h2>
-</div>
-<img src="assets/saawariya-banner.jpg" alt="SAAWARIYA INSTITUTE banner">
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="eyebrow">Excellence in Teaching</div>
+
+      <h1>
+        Learn with purpose.<br>
+        <span style="color:var(--gold)">
+          Achieve with confidence.
+        </span>
+      </h1>
+
+      <p>
+        Focused coaching in Physics, Mathematics
+        and Foundation studies, with online and
+        offline learning options.
+      </p>
+
+      <div class="tagline">
+        Your Success... Our Mission
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="#courses">Explore Courses</a>
+        <a class="btn-outline" href="#contact">
+          Contact the Institute
+        </a>
+      </div>
+    </div>
+
+    <div class="poster-frame">
+      <img src="assets/institute-poster.jpg"
+           alt="Saawariya Institute course and contact poster">
+    </div>
+
+  </div>
 </section>
 
 <section id="courses">
-<div class="heading">
-<div class="tag">WHAT WE OFFER</div>
-<h2>Our <span>Courses</span></h2>
-<p>Quality education with a focus on conceptual understanding.</p>
-</div>
-<div class="courses">
-<div class="course">
-<div class="symbol">Φ</div>
-<h3>Physics</h3>
-<p>Physics preparation for IIT JEE, NEET and CBSE Classes XI–XII.</p>
-</div>
-<div class="course">
-<div class="symbol">∑</div>
-<h3>Mathematics</h3>
-<p>Mathematics preparation for IIT JEE and CBSE Classes XI–XII.</p>
-</div>
-<div class="course">
-<div class="symbol">✦</div>
-<h3>Foundation</h3>
-<p>Foundation courses for CBSE, ICSE and I.B students in Classes IX–X.</p>
-</div>
-</div>
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">What we teach</div>
+      <h2>Courses at Saawariya Institute</h2>
+      <p>Explore the subjects and academic pathways featured by the institute.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">⚛</div>
+        <h3>Physics</h3>
+        <p>Physics coaching for school and entrance preparation.</p>
+        <ul>
+          <li>IIT JEE Mains</li>
+          <li>NEET</li>
+          <li>CBSE Classes XI–XII</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">∑</div>
+        <h3>Mathematics</h3>
+        <p>Mathematics support for school, competitive and higher studies.</p>
+        <ul>
+          <li>IIT JEE Mains</li>
+          <li>CBSE Classes XI–XII</li>
+          <li>B.Tech, CSAT, BMS and B.Com</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">▤</div>
+        <h3>Foundation</h3>
+        <p>Build strong academic foundations and concepts.</p>
+        <ul>
+          <li>CBSE</li>
+          <li>ICSE</li>
+          <li>IB</li>
+          <li>Classes IX–X</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
 </section>
 
 <section class="about" id="about">
-<div class="tag">ABOUT OUR INSTITUTE</div>
-<h2>Learn Today. <span>Lead Tomorrow.</span></h2>
-<p>SAAWARIYA INSTITUTE is committed to helping students build strong academic foundations through focused learning, clear concepts and consistent guidance.</p>
+  <div class="wrap about-grid">
+
+    <div>
+      <div class="eyebrow">About the institute</div>
+
+      <h2>
+        Strong concepts. Personal growth.
+        A brighter future.
+      </h2>
+
+      <p>
+        Saawariya Institute is committed to
+        excellence in teaching. Our aim is to
+        support students with focused subject
+        learning and guidance as they work
+        towards their academic goals.
+      </p>
+
+      <p>
+        Choose the learning mode that works
+        for you and get in touch to ask about
+        courses and admissions.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">Physics</span>
+        <span class="pill">Mathematics</span>
+        <span class="pill">Foundation</span>
+      </div>
+    </div>
+
+    <div class="poster-frame">
+      <img src="assets/institute-poster.jpg"
+           alt="Saawariya Institute official information poster">
+    </div>
+
+  </div>
 </section>
 
-<section id="learning">
-<div class="heading">
-<div class="tag">FLEXIBLE LEARNING</div>
-<h2>Choose Your <span>Learning Mode</span></h2>
-</div>
-<div class="modes">
-<div class="mode">
-<h3>Online Classes</h3>
-<p>Learn from anywhere with our online learning option.</p>
-</div>
-<div class="mode">
-<h3>Offline Classes</h3>
-<p>Learn through in-person classroom sessions.</p>
-</div>
-</div>
+<section class="modes" id="modes">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Flexible learning</div>
+      <h2>Learn Online or Offline</h2>
+      <p>
+        Choose the mode that suits your schedule
+        and learning preferences.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card mode-card">
+        <div class="icon">▣</div>
+        <h3>Online Classes</h3>
+        <p>
+          Learn remotely with the convenience
+          of online access. Contact the institute
+          for schedule and details.
+        </p>
+      </article>
+
+      <article class="card mode-card">
+        <div class="icon">▥</div>
+        <h3>Offline Classes</h3>
+        <p>
+          Ask about in-person classes,
+          batches and available timings.
+        </p>
+      </article>
+
+      <article class="card mode-card">
+        <div class="icon">✆</div>
+        <h3>Course Enquiry</h3>
+        <p>
+          Speak with the institute to find
+          the right subject and learning option.
+        </p>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<section class="contact" id="contact">
-<div class="tag">GET IN TOUCH</div>
-<h2>Start Your Learning Journey</h2>
-<p>Contact SAAWARIYA INSTITUTE for course enquiries.</p>
-<a class="phone" href="tel:+919871797348">98717 97348</a>
-<a class="phone" href="tel:+919599478202">95994 78202</a>
-<a class="btn" href="https://wa.me/919871797348" target="_blank">ENQUIRE ON WHATSAPP</a>
+<section id="contact">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Start your learning journey</h2>
+      <p>
+        Call the institute or send an enquiry
+        through WhatsApp.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>Contact Saawariya Institute</h3>
+
+        <p>
+          For course information, batch details
+          and admission enquiries, contact us:
+        </p>
+
+        <a class="phone" href="tel:+919871797348">
+          98717 97348
+        </a>
+
+        <a class="phone" href="tel:+919599478202">
+          95994 78202
+        </a>
+
+        <p style="margin-top:24px">
+          Learning modes:
+          <strong>Online &amp; Offline</strong>
+        </p>
+      </div>
+
+      <form id="enquiryForm">
+
+        <label for="name">Student / Parent Name</label>
+        <input id="name" name="name" required
+               placeholder="Enter your name">
+
+        <label for="mobile">Mobile Number</label>
+        <input id="mobile" name="mobile" required
+               inputmode="tel"
+               pattern="[0-9+() -]{8,18}"
+               placeholder="Enter your mobile number">
+
+        <label for="course">Course of Interest</label>
+        <select id="course" name="course">
+          <option>Physics</option>
+          <option>Mathematics</option>
+          <option>Foundation</option>
+          <option>Other / Need guidance</option>
+        </select>
+
+        <label for="mode">Preferred Learning Mode</label>
+        <select id="mode" name="mode">
+          <option>Online</option>
+          <option>Offline</option>
+          <option>Either</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"
+          placeholder="Tell us what you would like to know"></textarea>
+
+        <button class="btn" type="submit">
+          Send Enquiry on WhatsApp
+        </button>
+
+        <p class="note">
+          This form opens WhatsApp with your enquiry prepared.
+          It does not store submissions on this website.
+        </p>
+
+      </form>
+    </div>
+  </div>
 </section>
+
 </main>
 
 <footer>
-<div><strong>SAAWARIYA <span>INSTITUTE</span></strong></div>
-<p>Your Success... Our Mission</p>
-<p>© <span id="year"></span> SAAWARIYA INSTITUTE. All rights reserved.</p>
+  <div class="wrap">
+    <strong>SAAWARIYA INSTITUTE</strong>
+    <br>
+    <span>Your Success... Our Mission</span>
+    <br>
+    <small>
+      © <span id="year"></span>
+      Saawariya Institute. All rights reserved.
+    </small>
+  </div>
 </footer>
 
+<a class="mobile-call" href="tel:+919871797348">
+  ☎ Call Now
+</a>
+
 <script>
-document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+document.getElementById('enquiryForm')
+.addEventListener('submit', function(e) {
+
+  e.preventDefault();
+
+  const data = new FormData(this);
+
+  const msg = [
+    'Hello Saawariya Institute, I would like to enquire about courses.',
+    'Name: ' + data.get('name'),
+    'Mobile: ' + data.get('mobile'),
+    'Course: ' + data.get('course'),
+    'Preferred mode: ' + data.get('mode'),
+    'Message: ' + (data.get('message') ||
+      'Please share more details.')
+  ].join('\n');
+
+  const url =
+    'https://wa.me/919871797348?text=' +
+    encodeURIComponent(msg);
+
+  window.open(url, '_blank', 'noopener');
+});
 </script>
+
 </body>
 </html>
